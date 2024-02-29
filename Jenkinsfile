@@ -9,17 +9,17 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'mvn clean install'
+                sh 'buildingl'
             }
         }
         stage('Test') {
             steps {
-                sh 'mvn test'
+                sh 'test'
             }
         }
         stage('Deploy') {
             steps {
-                // Add deployment steps here
+               sh"deploying"
             }
         }
     }
